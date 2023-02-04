@@ -11,6 +11,13 @@ latestOption.text = "Latest";
 latestOption.value = "latest";
 select.add(latestOption);
 
+if(window.location.href.includes("stable")){
+    select.selectedIndex = 0;
+}
+if(window.location.href.includes("latest")){
+    select.selectedIndex = 1;
+}
+
 select.addEventListener("change", (event) => {
     const selectedValue = event.target.value;
     const currentUrl = window.location.href;
