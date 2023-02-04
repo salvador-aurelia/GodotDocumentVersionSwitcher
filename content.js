@@ -16,8 +16,10 @@ select.addEventListener("change", (event) => {
     const currentUrl = window.location.href;
     if(selectedValue === "stable"){
         window.location.href = currentUrl.replace("latest", "stable");
+        select.selectedIndex = 0;
     }else{
         window.location.href = currentUrl.replace("stable", "latest");
+        select.selectedIndex = 1;
     }
 });
 
