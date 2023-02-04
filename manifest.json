@@ -8,7 +8,7 @@
 
   },
   "action": {
-    "default_icon": "godoticon.png",
+    "default_icon": "128.png",
     "default_title": "GodotDocumentVersionSwitcher",
     "default_popup": "popup.html"
   },
