@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "GodotDocumentVersionSwitcher",
   "description": "Drop down menu to change version of the Godot documentation",
   "version": "1.0",
