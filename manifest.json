@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "GodotDocLauncher",
+  "description": "Launch the Godot Engine Documentation with one click.",
+  "version": "1.0",
+  "icons": {
+
+
+  },
+  "browser_action": {
+    "default_icon": "godoticon.png",
+    "default_title": "GodotDocumentVersionSwitcher",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://docs.godotengine.org/*",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.godotengine.org/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
