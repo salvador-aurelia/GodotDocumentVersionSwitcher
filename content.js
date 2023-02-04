@@ -1,15 +1,25 @@
-var text = document.querySelector(".version");
+const versionDiv = document.querySelector(".version");
+const select = document.createElement("select");
 
-if (text) {
-    var select = document.createElement("select");
-    select.classList.add("version");
+const stableOption = document.createElement("option");
+stableOption.text = "Stable";
+stableOption.value = "stable";
+select.add(stableOption);
 
-    var options = ["latest", "stable"];
-    options.forEach(function (option) {
-        var optionElement = document.createElement("option");
-        optionElement.value = option;
-        optionElement.textContent = option;
-        select.appendChild(optionElement);
-    });
+const latestOption = document.createElement("option");
+latestOption.text = "Latest";
+latestOption.value = "latest";
+select.add(latestOption);
 
-}
+select.addEventListener("change", (event) => {
+    const selectedValue = event.target.value;
+    const currentUrl = window.location.href;
+    if(selectedValue === "stable"){
+        window.location.href = currentUrl.replace("latest", "stable");
+    }else{
+        window.location.href = currentUrl.replace("stable", "latest");
+    }
+});
+
+versionDiv.innerHTML = "";
+versionDiv.appendChild(select);
