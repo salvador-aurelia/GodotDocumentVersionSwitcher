@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "GodotDocLauncher",
-  "description": "Launch the Godot Engine Documentation with one click.",
+  "name": "GodotDocumentVersionSwitcher",
+  "description": "Drop down menu to change version of the Godot documentation",
   "version": "1.0",
   "icons": {
 
