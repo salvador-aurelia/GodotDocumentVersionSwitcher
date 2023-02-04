@@ -7,15 +7,17 @@
 
 
   },
-  "browser_action": {
+  "action": {
     "default_icon": "godoticon.png",
     "default_title": "GodotDocumentVersionSwitcher",
     "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
-    "https://docs.godotengine.org/*",
     "storage"
+  ],
+  "host_permissions": [
+    "https://docs.godotengine.org/*"
   ],
   "content_scripts": [
     {
